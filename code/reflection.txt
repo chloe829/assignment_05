@@ -1,5 +1,15 @@
 Write your reflection here.
 
+In this assignment, two of the most important things I took away was learning how to work
+with datetime and transformations (pivot() and melt()). For example, in history.py we start 
+to work with datetimes on the parse_pay_date() function. Specifically, we use pd.to_datetime 
+to parse dates. In this code, we use the format codes '%m/%d/%Y' and '%Y-%m-%d' in which
+the 'Y' means full year, 'm' means part of month, and 'd' means day respectively. Furthermore
+in add_date_parts() function, we specifically use dt.strftime() which is meant for formatting
+specifically. On the topic of reshaping, reshape.py utilized pivot_tables due to its need 
+to pivot and aggregate data simultaneously. It (reshape.py) also used the melt() function to make 
+the data longer. Whereas in summarize.py, groupby() was used strictly for aggregation.
+
 See reflection.md for what makes a good reflection — be specific, use the
 terminology from this assignment (grain, long vs. wide, vectorized .str methods,
 coerce, NaT, pd.to_datetime format, .dt, concat, ignore_index, group by, named
