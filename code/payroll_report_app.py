@@ -20,8 +20,16 @@ Test it: pytest tests/test_pipeline.py -k app
 # package, and every widget it needs you used in Assignments 03 and 04 — plus two
 # new ones, st.date_input and st.bar_chart. README Step 8 has the exact widgets,
 # keys and labels; the tests in tests/test_pipeline.py -k app check them.
-#
-# The shape, in words:
+
+import streamlit as st
+from payroll import (
+    load_employees, load_export, build_history,
+    pay_by_month, summarize_employees, hours_grid, missed_weeks
+)
+
+
+def main():
+    '''The shape, in words:
 #
 #   title and a sentence of instructions
 #   roster   <- load_employees()                           (fixed; not uploaded)
@@ -43,16 +51,7 @@ Test it: pytest tests/test_pipeline.py -k app
 #       st.download_button, key="download": pay_by_month(...).to_csv(index=False)
 #
 # What the page does NOT do: cleaning, grouping, pivoting. If you find yourself
-# writing a groupby or a pivot_table here, that logic belongs in the package.
-
-import streamlit as st
-from payroll import (
-    load_employees, load_export, build_history,
-    pay_by_month, summarize_employees, hours_grid, missed_weeks
-)
-
-
-def main():
+# writing a groupby or a pivot_table here, that logic belongs in the package.'''
     st.title("Salt City Coffee — Quarterly Payroll Report")
     st.write(
         "Upload payroll exports and explore hours, pay, and attendance for the quarter."

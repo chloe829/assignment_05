@@ -8,7 +8,13 @@ the 'Y' means full year, 'm' means part of month, and 'd' means day respectively
 in add_date_parts() function, we specifically use dt.strftime() which is meant for formatting
 specifically. On the topic of reshaping, reshape.py utilized pivot_tables due to its need 
 to pivot and aggregate data simultaneously. It (reshape.py) also used the melt() function to make 
-the data longer. Whereas in summarize.py, groupby() was used strictly for aggregation.
+the data longer. Whereas in summarize.py, groupby() was used strictly for aggregation. However,
+although I was able to learn about reshaping, I started to get lost starting at summarize.py in which
+I didn't quite know how to start the code. I think I have to practice more utilization of
+shaping functions. I understand what they do, but need more practice with use cases. For example, 
+for the summary = grouped.agg() section, I didn't quite know how to format or code it and needed
+assistance. Therefore, I need more practice just using the functions and thinking of how to use them 
+rather than just when to use them or what they're for.
 
 See reflection.md for what makes a good reflection — be specific, use the
 terminology from this assignment (grain, long vs. wide, vectorized .str methods,

@@ -41,7 +41,8 @@ def hours_grid(history: pd.DataFrame) -> pd.DataFrame:
     )
     pivot = pivot.reset_index()
     pivot = pivot.sort_values(by='employee_id').reset_index(drop=True)
-    week_cols = sorted([col for col in pivot.columns if col not in ['employee_id', 'display_name']])
+    week_cols = sorted(
+        [col for col in pivot.columns if col not in ['employee_id', 'display_name']])
     pivot = pivot[['employee_id', 'display_name'] + week_cols]
 
     return pivot
