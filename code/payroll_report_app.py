@@ -27,7 +27,6 @@ from payroll import (
     pay_by_month, summarize_employees, hours_grid, missed_weeks
 )
 
-
 def main():
     '''The shape, in words:
 #
@@ -138,7 +137,6 @@ def main():
             mime="text/csv",
             key="download",
         )
-
 
 if __name__ == "__main__":
     main()
