@@ -59,7 +59,7 @@ def add_roster(history: pd.DataFrame, employees: pd.DataFrame) -> pd.DataFrame:
     `add_clean_columns` first — the raw `employeeid` does not match anything.
     """
     roster_copy = employees.copy()
-    roster_copy['display_name'] = format_name(roster_copy['name'])  
+    roster_copy['display_name'] = format_name(roster_copy['name'])
     roster_subset = roster_copy[['employee_id', 'display_name', 'department']]
     merged_history = history.merge(roster_subset, on='employee_id', how='left')
     return merged_history
